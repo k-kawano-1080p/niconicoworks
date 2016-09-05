@@ -1,0 +1,673 @@
+@charset "UTF-8";
+/* CSS Document */
+/*------------------------------------------------------------ リセット
+------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, figure { font-size: 1em; margin: 0; padding: 0; border: 0; outline: 0; }
+
+body, table, input, textarea, select, option { font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Meiryo UI, 'ＭＳ Ｐゴシック'; font-size: 1em; }
+
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+:focus { outline: 0; }
+
+ins { text-decoration: none; }
+
+del { text-decoration: line-through; }
+
+/*------------------------------------------------------------ 基本
+------------------------------------------------------------*/
+body { font-size: 13px; line-height: 26px; background: #f5f5f5 url(../img/bg.png); min-width: 1000px; color: #333; _display: inline; _zoom: 1; }
+
+/*------------------------------------------------------------ 画像位置
+------------------------------------------------------------*/
+.alignright { float: right; margin-bottom: 1em; margin-left: 2em; }
+
+.alignleft { float: left; margin-right: 2em; margin-bottom: 1em; }
+
+.aligncenter { display: block; margin-right: auto; margin-bottom: 2em; margin-left: auto; }
+
+/*------------------------------------------------------------ 文字装飾
+------------------------------------------------------------*/
+.space { margin-bottom: 1em; }
+
+.bold { font-weight: bold; }
+
+blockquote { margin: 1em 0; padding: 10px 20px; border: 4px solid #ddd; }
+
+strong { font-weight: normal; }
+
+/*------------------------------------------------------------ レイアウト
+------------------------------------------------------------*/
+#header { background-color: #39f; }
+
+#h_body { width: 1000px; margin: 0 auto; padding: .5em 0; }
+
+.h_l { float: left; width: 335px; padding-top: 7px; }
+
+.h_r { float: right; }
+
+.h_c { float: right; padding-top: 7px; }
+.h_c li { float: left; margin-right: 10px; vertical-align: bassline; }
+
+.fb_iframe_widget > span { vertical-align: baseline !important; }
+
+#wrapper { width: 980px; margin: 0 auto; padding: 0 10px; }
+
+#main { float: left; width: 650px; }
+
+#side { font-size: 13px; line-height: 22px; float: right; width: 300px; margin-top: 0; color: #666; }
+
+#footer { border-top: 5px solid #d5d5d5; background-color: #eee; }
+
+#f_body { width: 980px; margin: 0 auto; padding: 10px; }
+
+/*------------------------------------------------------------ 新着情報
+------------------------------------------------------------*/
+#feedarea { margin: 2em 0; }
+#feedarea dt { line-height: 24px; width: 180px; padding-right: 1em; }
+#feedarea dd { line-height: 24px; margin-top: -24px; padding-left: 150px; }
+#feedarea a { text-decoration: none; color: #09f; }
+#feedarea a:hover { text-decoration: underline; color: #06f; }
+
+.article_title { padding-left: 1em; }
+
+#feedarea img { vertical-align: middle; }
+
+/*------------------------------------------------------------ 投稿
+------------------------------------------------------------*/
+.trimming { overflow: hidden; width: 625px; height: 200px; }
+
+.post { padding: 0 0; }
+.post a { text-decoration: none; color: blue; }
+.post a:hover { text-decoration: none; color: #06f; }
+.post h1, .post h2 { font-size: 26px; font-weight: normal; line-height: 36px; margin-bottom: 1em; padding-left: 15px; border-left: 5px solid #fc0; }
+.post h1 a, .post h2 a { text-decoration: none; color: #666; }
+.post h1 a:hover, .post h2 a:hover { text-decoration: none; color: #09f; }
+.post h3 { font-size: 18px; font-weight: bold; line-height: 28px; margin: 2em 0 .5em; padding-left: 28px; background: url(../img/astelisk_blue.png) no-repeat left center; }
+.post h4 { font-size: 15px; font-weight: bold; line-height: 28px; margin: 2em 0 .5em; padding-left: 23px; background: url(../img/circle_blue.png) no-repeat left center; }
+
+.postarticle { margin-bottom: 0em; padding: 1em 10px 0em; }
+
+/*------------------------------------------------------------ 投稿下部　POSTINFO
+------------------------------------------------------------*/
+.postinfo { margin-top: 2em; text-align: right; color: #666; }
+.postinfo a { text-decoration: none; color: #09f; }
+.postinfo a:hover { text-decoration: none; color: #06f; }
+
+/*------------------------------------------------------------ サイドバー
+------------------------------------------------------------*/
+#side ul { margin: 0; padding: 0; }
+#side li { list-style-type: none; }
+#side .widget { padding: 0 0 1em 0; background: url(../img/bg-sidewrapper.png) left bottom repeat-x; }
+#side h2 { font-size: 14px; font-weight: bold; margin: 1em 0; color: #666; }
+
+.widget_newpostcatch h2 { width: 140px; height: 16px; text-indent: -9999px; background: url(../img/text_recententries.png) no-repeat; }
+.screen-reader-text {width: 66px;height: 16px;text-indent: -9999px;background: url(../img/text_search.png) no-repeat;display: block;margin: 0 0 1em 0;}
+#searchsubmit {
+    background: #ccc3be;
+    background-image: -webkit-linear-gradient(top, #ccc3be, #d9e9f2);
+    background-image: -moz-linear-gradient(top, #ccc3be, #d9e9f2);
+    background-image: -ms-linear-gradient(top, #ccc3be, #d9e9f2);
+    background-image: -o-linear-gradient(top, #ccc3be, #d9e9f2);
+    background-image: linear-gradient(to bottom, #ccc3be, #d9e9f2);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Meiryo UI, 'ＭＳ Ｐゴシック';
+    color: #000000;
+    font-size: 14px;
+    padding: 0px 10px 1px 10px;
+    text-decoration: none !important;
+}
+#searchsubmit:hover {
+  background: #c1d3de;
+  background-image: -webkit-linear-gradient(top, #c1d3de, #ffffff);
+  background-image: -moz-linear-gradient(top, #c1d3de, #ffffff);
+  background-image: -ms-linear-gradient(top, #c1d3de, #ffffff);
+  background-image: -o-linear-gradient(top, #c1d3de, #ffffff);
+  background-image: linear-gradient(to bottom, #c1d3de, #ffffff);
+  text-decoration: none;
+}
+.widget_categories h2 { width: 100px; height: 16px; text-indent: -9999px; background: url(../img/text_categories.png) no-repeat; }
+.widget_tag_cloud h2 { width: 38px; height: 16px; text-indent: -9999px; background: url(../img/text_tag.png) no-repeat; }
+.tagcloud a { font-size: 14px !important; display: block; }
+#side a { text-decoration: none; color: #666; }
+#side a:hover { text-decoration: none; color: #09f; }
+
+.sidead { margin: 0 0 1em 0; width: 300px; height: 256px; }
+.content-ad { width: 300px; height: 256px; }
+
+/*------------------------------------------------------------ フッター
+------------------------------------------------------------*/
+#backmark { width: 980px; height: 24px; margin: 0 auto; }
+#backmark p { margin: 0; text-align: center; }
+
+#leftbox { float: left; width: 220px; margin-left: 10px; }
+#leftbox a { padding-left: 10px; text-decoration: none; color: #666; }
+#leftbox a:hover { padding: 2px; color: #fff; background-color: #09f; }
+
+#centerbox { float: left; width: 370px; margin-left: 30px; }
+#centerbox p { padding-left: 10px; }
+
+#rightbox { float: left; width: 290px; margin-left: 40px; }
+
+.ftel { line-height: 20px; padding-left: 28px; background: url(../img/telmark20.png) no-repeat; background-size: 20px; }
+
+.fmail { line-height: 20px; padding-left: 28px; background: url(../img/gmail20.png) no-repeat; background-size: 20px; }
+
+.fmobi { line-height: 20px; padding-left: 28px; background: url(../img/iphone4s20.png) no-repeat; background-size: 20px; }
+
+.fskype { line-height: 20px; padding-left: 28px; background: url(../img/skype20.png) no-repeat; background-size: 20px; }
+
+.sw_icon { background: url(../img/sw_icon.jpg) no-repeat left center; }
+
+#footer_page { width: 980px; margin: 0 auto; padding: 10px; }
+#footer_page a { text-decoration: none; color: #333; }
+#footer_page a:hover { color: #09f; border-bottom: 1px dotted #09f; }
+#footer_page h4 { font-size: 13px; font-weight: bold; line-height: 28px; margin-bottom: .5em; padding-left: 30px; letter-spacing: 1px; color: #333; }
+#footer_page h5 { font-size: 13px; font-weight: bold; line-height: 28px; padding-left: 10px; letter-spacing: 1px; color: #333; background: url(../img/redball.png) no-repeat left center; }
+
+.footerbox1 { float: left; width: 230px; margin-left: 10px; }
+.footerbox1 li { font-size: 11px; line-height: 20px; padding-left: 10px; background: url(../img/listmark_arrow.png) no-repeat left center; }
+
+.footerbox2 { float: left; width: 400px; margin-left: 38px; }
+.footerbox2 li { font-size: 11px; line-height: 20px; }
+.footerbox2 p { font-size: 11px; line-height: 20px; padding-left: 5px; }
+
+.footerbox3 { float: left; width: 210px; margin-left: 38px; }
+.footerbox3 li { font-size: 13px; line-height: 20px; padding-bottom: 5px; }
+
+#copy { font-size: 10px; width: 1000px; margin: 0 auto; text-align: right; letter-spacing: 2px; color: #333; }
+
+/*------------------------------------------------------------ NewPost Catch
+------------------------------------------------------------*/
+#npcatch li { clear: both !important; overflow: hidden !important; margin: 1em 0 !important; }
+#npcatch img { float: left !important; padding: 3px !important; border: 1px solid #eee !important; }
+#npcatch .title { float: left !important; width: 190px !important; padding: 5px 5px 5px 1em !important; }
+
+/*------------------------------------------------------------ コメント
+------------------------------------------------------------*/
+#comments { margin-bottom: 2em; padding: 0 0em; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; -o-border-radius: 10px; -ms-border-radius: 10px; }
+#comments h3 { line-height: 25px; margin-bottom: .5em; padding-bottom: .5em; padding-left: 40px; border-bottom: 2px solid #eee; background: url(../img/fukidashi.png) no-repeat; }
+#comments p { font-size: 13px; line-height: 22px; }
+#comments p a { line-height: 22px; text-decoration: none; color: #09f; }
+#comments p a:hover { line-height: 22px; text-decoration: underline; color: #06f; }
+#comments input { display: block; }
+#comments textarea { display: block; width: 450px; margin-bottom: 1em; }
+#comments .required { color: #f00; }
+#comments ul { margin: 0; padding: 0; }
+#comments li.compost { margin-bottom: 1em; list-style-type: none; border-bottom: 1px dashed #eee; }
+#comments p.cominfo { margin-top: 1em; margin-bottom: 2em; text-align: right; }
+
+.form-allowed-tags, .comment-form-url, .comment-form-email, .comment-notes { display: none; }
+
+/*------------------------------------------------------------ ダウンロードボタン
+------------------------------------------------------------*/
+.center { text-align: center; }
+
+.dl_btn { display: block; overflow: hidden; width: 120px; height: 35px; text-indent: -9999px; background: url(../img/dlbtn.png); }
+.dl_btn:hover { background: url(../img/dlbtn.png); background-position: left bottom; }
+
+.btn { display: block; overflow: hidden; width: 120px; height: 35px; -webkit-transition: opacity .5s linear; text-indent: -9999px; opacity: 1; background: url(../img/on_off.png); }
+.btn:hover { background: url(../img/on_off.png); background-position: left bottom; }
+
+.fade { -webkit-transition: .3s ease-in-out; -moz-transition: .3s ease-in-out; -o-transition: .3s ease-in-out; transition: .3s ease-in-out; opacity: .6; filter: alpha(opacity=80); }
+.fade:hover { opacity: 1; filter: alpha(opacity=100); }
+.fade img { display: none; }
+
+/*------------------------------------------------------------ スライドショー
+------------------------------------------------------------*/
+.slide { overflow: hidden; }
+
+.simpleSlideShowWrapper { position: relative; }
+.simpleSlideShowWrapper img { position: absolute; top: 0; left: 0; }
+
+/*------------------------------------------------------------ バックトゥトップ
+------------------------------------------------------------*/
+#page-top { position: fixed; right: 20px; bottom: 20px; }
+#page-top a { display: block; width: 80px; height: 50px; text-indent: -9999px; background: url(../img/page_top_btn.png) no-repeat; }
+#page-top a:hover { opacity: .6; filter: alpha(opacity=60); }
+
+/*------------------------------------------------------------ 要素をランダムに表示サンプル
+------------------------------------------------------------*/
+#sample { display: block; width: 500px; margin-right: auto; margin-left: auto; }
+#sample div { float: left; width: 150px; height: 150px; margin-bottom: 10px; margin-left: 10px; }
+
+/*------------------------------------------------------------ GRAD2
+------------------------------------------------------------*/
+.gradation { font-weight: bold; padding: 10px; text-align: center; color: #fff; border: 1px solid #ddd; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background: -webkit-gradient(linear, left top, left bottom, color-stop(1, #fff), color-stop(0.51, #d1d1d1), color-stop(0.5, #dbdbdb), color-stop(0, #dcdcdc)); background: -webkit-linear-gradient(top, #dcdcdc 0%, #dbdbdb 50%, #d1d1d1 51%, #fff 100%); background: -moz-linear-gradient(top, #dcdcdc 0%, #dbdbdb 50%, #d1d1d1 51%, #fff 100%); background: -o-linear-gradient(top, #dcdcdc 0%, #dbdbdb 50%, #d1d1d1 51%, #fff 100%); background: -ms-linear-gradient(top, #dcdcdc 0%, #dbdbdb 50%, #d1d1d1 51%, #fff 100%); background: linear-gradient(top, #dcdcdc 0%, #dbdbdb 50%, #d1d1d1 51%, #fff 100%); box-shadow: 2px 2px 3px #ddd; text-shadow: 1px 1px 2px #666; -o-border-radius: 5px; -ms-border-radius: 5px; }
+
+.block { font-size: 13px; line-height: 22px; margin-bottom: 1em; padding: 1em 2em; color: #333; background-color: #f0f8ff; }
+
+/*------------------------------------------------------------ パンくずリスト
+------------------------------------------------------------*/
+#pankuzu { width: 980px; margin: 0 auto; }
+
+.bread_crumb { display: table-cell; clear: both; height: 20px; margin: 0; padding: 1em 0; }
+.bread_crumb li { font-size: 12px; float: left; /*margin-right:1em;*/ list-style: none outside none; color: #b4b4b4; }
+.bread_crumb li:after { margin-right: 10px; padding-left: 10px; content: '>'; }
+.bread_crumb li:last-child:after { content: ''; float: inherit; }
+.bread_crumb li a { text-decoration: none; color: #1288ba; }
+.bread_crumb li a:hover { text-decoration: underline; color: #06f; }
+
+/*------------------------------------------------------------ 画像回転　jQueryRotate
+------------------------------------------------------------*/
+.rotate { position: relative; z-index: -1; top: 0; left: 0; width: 630px; height: 300px; }
+
+.pentagon_orange { z-index: 1; top: 20px; left: 80px; positon: absolute; }
+
+.pentagon_purple { position: absolute; z-index: 2; top: 50px; left: 80px; }
+
+.trapezoid_blue { position: absolute; z-index: 3; top: 120px; left: 350px; }
+
+.trapezoid_red { position: absolute; z-index: 4; top: 120px; left: 400px; }
+
+.star_green { position: absolute; z-index: 5; top: 20px; left: 480px; }
+
+.star_brown { position: absolute; z-index: 6; top: 180px; left: 100px; }
+
+.diamond { position: absolute; z-index: 7; top: 60px; left: 230px; }
+
+.rotatetext { font-family: 'ＭＳ ゴシック',sans-serif; font-size: 12px; font-weight: normal; position: absolute; top: 30px; left: 280px; }
+
+/*------------------------------------------------------------ 関連店舗一覧サムネイル
+------------------------------------------------------------*/
+ul.related_list li { float: left; width: 140px; min-height: 250px; margin: 1em 0; padding: 0 10px 15px; text-align: left; border-right: 1px dotted #d5d5d5; }
+ul.related_list li:hover { background-color: #fffafa; }
+ul.related_list li:last-child { float: left; width: 140px; margin: 1em 0; padding: 0 10px 15px; text-align: left; border-right: none; }
+ul.related_list li img { margin-left: 5px; padding: 2px; border: 3px solid #ddd; }
+ul.related_list a { color: #666; }
+ul.related_list a:hover { color: #f90; }
+
+.related_title { font-size: 13px; line-height: 18px; word-wrap: break-word; color: #666; }
+
+/*------------------------------------------------------------ OWL Carousel
+------------------------------------------------------------*/
+#owl .item img { display: block; margin: 0 auto; }
+
+.owlcolor { font-weight: bold; color: #869791; }
+
+/************************************
+** blog_info 2016/02/26
+************************************/
+div.blog_info { font-size: 85%; /* IE */ zoom: 1; margin: 0; padding: 5px; /* IE */ color: #444; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#20000000,endColorstr=#20000000); }
+div.blog_info ul { margin: 0; }
+div.blog_info li { float: left; margin: 0 15px 0 5px !important; padding-left: 20px; list-style: none !important; }
+div.blog_info li a { display: inline; color: #444; }
+div.blog_info li a:hover { color: #0066c0; }
+div.blog_info li.cal { background: url(../img/icon_cal.png) no-repeat 0 2px; }
+div.blog_info li.cat { background: url(../img/icon_cat.png) no-repeat 0 2px; }
+div.blog_info li.tag { background: url(../img/icon_tag.png) no-repeat 0 2px; }
+div.nav-below { overflow: auto; margin: 40px 0 0; }
+div.navigation a { margin-bottom: 10px; }
+div.navigation .left a, div.navigation .right a, div.navigation .left, div.navigation .right { margin-bottom: 0; }
+
+/*------------------------------------------------------------ ページ送り
+------------------------------------------------------------*/
+.wp-pagenavi { margin-bottom: 10px; }
+.wp-pagenavi .page:hover { color: #fff; background-color: #e3e3e3; }
+.wp-pagenavi .nextpostslink:hover { color: #fff; background-color: #e3e3e3; }
+.wp-pagenavi .previouspostslink:hover { color: #fff; background-color: #e3e3e3; }
+.wp-pagenavi a { display: inline-block; margin: 3px; padding: 5px 10px !important; text-decoration: none; text-decoration: none; color: #1288ba; border: solid 1px #999 !important; border-radius: 2px; }
+.wp-pagenavi span { font-size: .8rem; display: inline-block; padding: 5px 10px !important; border: solid 1px #999 !important; border-radius: 2px; }
+.wp-pagenavi span.current { color: #fff; border-color: solid 1px #999 !important; background-color: #43baf1; }
+
+ /************************************
+** ナビ 2016/02/26
+************************************/
+.lficon { position: relative; display: inline-block; float: left; margin: 5px; }
+.lficon:before { position: absolute; top: 50%; left: -15px; display: inline-block; margin-top: -8px; content: ''; border: 8px solid transparent; border-right-color: #39f; }
+
+.rticon { position: relative; display: inline-block; float: right; margin: 5px; }
+.rticon:before { position: absolute; top: 50%; right: -15px; display: inline-block; margin-top: -8px; content: ''; border: 8px solid transparent; border-left-color: #39f; }
+
+.nav-previous a, .nav-next a { color: #fff !important; }
+
+div.navigation .left a, div.navigation .right a { color: #fff !important; }
+
+.nav-previous a:hover, .nav-next a:hover { color: #39f !important; }
+
+div.navigation .left a:hover, div.navigation .right a:hover { color: #39f !important; }
+
+.nav-previous a, .nav-next a { font-size: 85%; text-decoration: none; color: #333; }
+
+div.navigation .left a, div.navigation .right a { font-size: 85%; text-decoration: none; color: #333; }
+
+.nav-previous a:hover, .nav-next a:hover { color: #999; }
+
+div.navigation .left a:hover, div.navigation .right a:hover { color: #999; }
+
+.nav-previous a, div.navigation .left a { float: left; padding: 0 10px 0 3px; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; background-color: #39f; }
+
+.nav-next a, div.navigation .right a { float: right; padding: 0 3px 0 10px; text-align: right; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; background-color: #39f; }
+
+/*------------------------------------------------------------ 抜粋セット 2016/02/25
+------------------------------------------------------------*/
+.grid { position: relative; width: 750px; }
+.grid .col-1-3 { width: 33.33%; }
+.grid .wrap-col { margin: 0 10px; }
+
+article.postBox { margin-bottom: 30px; }
+article.postBox .metaData { padding: 12px; border-radius: 12px 12px 0 0 / 12px 12px 0 0; background: #fd5ce5; }
+article.postBox .metaData p { font-size: 81%; line-height: 1.2em; margin-right: 1em; }
+article.postBox .heading { padding: 12px; background: #fff; }
+article.postBox .heading h2 { font-size: 122%; line-height: 1.2em; overflow: hidden; height: 4.8em; margin-bottom: 10px; text-decoration: none; }
+article.postBox .heading h2 a { text-decoration: underline; }
+article.postBox .excerpt { font-size: 85%; line-height: 1.4em; overflow: hidden; height: 12.4em; padding: 12px; border-radius: 0 0 12px 12px / 0 0 12px 12px; background: rgba(255, 255, 255, 0.5); }
+article.postBox .excerpt p { font-size: 16px; text-decoration: none !important; }
+article.postBox .excerpt a { font-size: 16px; text-decoration: none !important; }
+article.postBox .excerpt:hover { text-decoration: underline; }
+
+.clearfix:after { display: table; clear: both; content: ''; }
+
+article:after { display: table; clear: both; content: ''; }
+article.postBox { margin-bottom: 30px; }
+article.postBox .metaData { padding: 12px; border-radius: 12px 12px 0 0 / 12px 12px 0 0; background: #39f; }
+article.postBox .metaData p { font-size: 81%; line-height: 1.2em; float: left; margin-right: 1em; color: #fff !important; }
+article.postBox .metaData p img { width: 24px; height: 15px; }
+article.postBox .metaData p a { text-decoration: none; color: #fff !important; }
+article.postBox .metaData p a:hover { text-decoration: underline; }
+article.postBox .heading { padding: 12px; background: #fff; }
+article.postBox .heading h2 { font-size: 147%; line-height: 1.2em; overflow: hidden; height: 4.8em; margin-bottom: 10px; text-decoration: none; }
+article.postBox .heading h2 a { text-decoration: none; }
+article.postBox .heading h2 a:hover { text-decoration: underline; color: #00c6ff; }
+article.postBox .excerpt { font-size: 85%; line-height: 1.4em; overflow: hidden; height: 12.4em; padding: 12px; border-radius: 0 0 12px 12px / 0 0 12px 12px; background: rgba(255, 255, 255, 0.5); }
+article.postBox .excerpt a:hover { text-decoration: none; color: #0e195b; }
+article.postBox .heading h2, article.postBox .excerpt { overflow: visible; height: auto; }
+
+.more-link { font-family: 'Open Sans', sans-serif; font-size: 12px; position: relative; top: 15px; float: right; padding: 10px 20px; padding-right: 50px; text-decoration: none; color: #fff; border-radius: 5px; background-color: #39f; background-image: linear-gradient(bottom, #3e332e 0%, #65564e 100%); box-shadow: inset 0 1px 0 #9e8d84, 0 5px 0 0 #dcdcdc, 0 10px 5px #999; }
+.more-link:active { top: 17px; color: #fff !important; background-image: linear-gradient(bottom, #3e332e 100%, #65564e 0%); box-shadow: inset 0 1px 0 #9e8d84, 0 2px 0 0 #dcdcdc, 0 5px 3px #999; }
+.more-link:hover { top: 17px; color: #fff !important; background-image: linear-gradient(bottom, #3e332e 100%, #65564e 0%); box-shadow: inset 0 1px 0 #9e8d84, 0 2px 0 0 #dcdcdc, 0 5px 3px #999; }
+.more-link::before { position: absolute; top: 50%; right: 15px; width: 20px; height: 20px; margin-top: -9px; content: ''; border-radius: 50%; background-color: #322620; background-image: url(../img/right_arrow.png); background-repeat: no-repeat; background-position: center center; background-size: 20px !important; background-size: 19px; box-shadow: inset 0 1px 0 #827066, 0 1px 0 #827066; }
+.more-link:active::before { top: 50%; margin-top: -12px; box-shadow: inset 0 1px 0 #827066, 0 3px 0 #dcdcdc, 0 6px 3px #a5a09e; }
+.more-link:hover::before { top: 50%; margin-top: -12px; box-shadow: inset 0 1px 0 #827066, 0 3px 0 #dcdcdc, 0 6px 3px #a5a09e; }
+
+/*------------------------------------------------------------ ページネーション
+------------------------------------------------------------*/
+ul.pagination { text-align: center; }
+ul.pagination ul.page-numbers { display: inline-block; margin: 0; padding: 0; }
+ul.pagination ul.page-numbers li { display: inline; }
+ul.pagination ul.page-numbers li a { float: left; padding: 8px 16px; transition: background-color .3s; text-decoration: none; color: black; border: 1px solid #ddd; }
+ul.pagination ul.page-numbers li .current { float: left; padding: 8px 16px; text-decoration: none; color: white; border: 1px solid #4caf50; background-color: #4caf50; }
+ul.pagination ul.page-numbers li a:hover:not(:active) { background-color: #ddd; }
+
+/*------------------------------------------------------------ コメント欄
+------------------------------------------------------------*/
+#comment_area { line-height: 1.4em; margin-top: 1em; padding: 25px; border-radius: 12px; background: rgba(255, 255, 255, 0.5); }
+#comment_area h3#comments { font-size: 130%; margin: 0 0 .7em; }
+#comment_area ol { list-style: none; }
+#comment_area ol li { overflow: hidden; }
+#comment_area ol li.depth-1 { margin-bottom: 1em; padding: 12px; border: 1px dotted #fff; }
+#comment_area ol li ul.children { margin-left: 10%; }
+#comment_area ol li ul.children li { margin-top: 1em; padding-top: 12px; border-top: 1px dotted #fff; }
+
+/*Comment List*/
+/*children 返信部分*/
+img.avatar { float: left; margin-right: 8px; }
+
+span.says { display: none; }
+
+cite.fn { font-size: 90%; }
+
+div.comment-meta { font-size: 80%; }
+div.comment-meta:after { display: block; visibility: hidden; clear: both; height: 0; content: ''; }
+
+.comment-body p { font-size: 90%; margin: .8em 0 .5em; padding: .5em 1em; color: black; border-radius: 12px; background: #fff; }
+
+div.reply { margin-bottom: .2em; }
+div.reply:after { display: block; visibility: hidden; clear: both; height: 0; content: ''; }
+div.reply a { font-size: 80%; line-height: 1em; display: block; float: right; padding: .3em 1em; border-radius: 8px; background: #05c6fe; }
+div.reply a:hover { text-decoration: none; background: #fff; }
+
+/*返信button*/
+/*Comment Form*/
+#respond { padding: 1em; border-radius: 9px; background: rgba(255, 255, 255, 0.4); -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+#respond h3#reply-title { font-size: 130%; margin: 0 0 .7em; color: #2d1497; }
+#respond h3#reply-title small a { font-size: 70%; margin-left: 1em; text-decoration: underline; }
+#respond p { margin-bottom: .5em; }
+#respond p.commentNotesBefore, #respond p.commentNotesAfter { font-size: 80%; }
+#respond p.form-submit { margin-bottom: 0; }
+
+/*コメントをキャンセルの文字*/
+/*form element*/
+input#author, input#email { font-size: 14px; width: 95%; margin-top: 0; padding: 7px 12px; color: #05c6fe; border: none; border-radius: 12px; }
+
+textarea#comment { font-size: 14px; line-height: 1.6em; width: 95%; margin-top: 0; padding: 7px 12px; color: #05c6fe; border: none; border-radius: 12px; background-color: #FFFFFF; -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+
+input#submit { font-size: 110%; margin: 0; padding: 5px 1em; cursor: pointer; color: #fff; border-style: none; border-radius: 18px; background: #05c6fe; }
+input#submit:hover { background: #2d1497; }
+
+/*------------------------------------------------------------ テキスト一覧
+------------------------------------------------------------*/
+.txt-ranking { overflow: hidden; clear: both; margin: 10px 0 10px 0; border: 1px solid #e2e2e2; background: #fff; -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+
+.txt-ranking h2 { font-size: 1rem; margin: 0; padding: 0 20px; color: #444; /* border-top: 1px solid #ddd; */ border-bottom: 1px solid #ddd; background: #f0f0f0 url(../img/heading-bg.png) repeat-x; text-shadow: 1px 1px 1px #fff; }
+
+.txt-ranking ol { margin: 0; padding: 0; }
+.txt-ranking ol li { font-size: .8rem; margin: 0; padding: 0; list-style-type: decimal; }
+.txt-ranking ol li a { position: relative; display: block; padding: 0 30px; text-decoration: none; color: #1288ba; }
+.txt-ranking ol li a:hover { background-color: #e3e3e3; }
+.txt-ranking ol li a:after { position: absolute; top: 50%; left: 9px; display: block; width: 6px; height: 6px; margin-top: -5px; content: ''; border: 1px solid #0a6691; background-color: #0a6691; }
+
+/*------------------------------------------------------------ 抜粋
+------------------------------------------------------------*/
+.posts { margin: 10px 0 10px 0; border: 1px solid #e2e2e2; background: #fff; -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+.posts h2 { font-size: 1rem; margin-bottom: 0; padding: 0 20px; color: #444; /* border-top: 1px solid #ddd; */ border-bottom: 1px solid #ddd; background: #f0f0f0 url(../img/heading-bg.png) repeat-x; text-shadow: 1px 1px 1px #fff; }
+
+.postlist { overflow: hidden; margin: 10px 0; }
+.postlist > li { overflow: hidden; margin: 0 20px; }
+.postlist .post { overflow: hidden; padding: 0 !important; }
+.postlist .post-info { overflow: hidden; margin: 0 5px; }
+.postlist .post-info span { font-size: .75rem; float: left; }
+.postlist .post-info .blog_info2 { font-size: 85%; /* IE */ zoom: 1; margin: 0; padding: 5px; /* IE */ color: #444; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#20000000,endColorstr=#20000000); }
+.postlist .post-info .blog_info2 ul { margin: 0; }
+.postlist .post-info .blog_info2 li { float: left; margin: 0 15px 0 5px !important; padding-left: 20px; list-style: none !important; }
+.postlist .post-info .blog_info2 li a { display: inline; color: #444; }
+.postlist .post-info .blog_info2 li a:hover { color: #0066c0; }
+.postlist .post-info .blog_info2 li.cal { background: url(../img/icon_cal.png) no-repeat 0 2px; }
+.postlist .post-info .blog_info2 li.cat { background: url(../img/icon_cat.png) no-repeat 0 2px; }
+.postlist .post-info .blog_info2 li.tag { background: url(../img/icon_tag.png) no-repeat 0 2px; }
+.postlist .category li { float: left; }
+.postlist .post a { display: block; overflow: hidden; margin: 3px; padding: 3px; color: #1288ba; }
+.postlist .post a:hover { background-color: #e3e3e3; }
+.postlist .main-eyecatch { display: block; float: left; width: 130px; }
+.postlist .main-eyecatch img { width: 110px; height: 110px; margin: 10px 10px 10px 10px; border-radius: 1px; }
+.postlist .title { font-size: 1.7rem; font-weight: 500; line-height: 1.4; display: block; float: left; width: 435px; padding: 10px 15px; }
+
+/*------------------------------------------------------------ 構造化マークアップ済み パンくずリスト
+------------------------------------------------------------*/
+.single-post { border: 1px solid #e2e2e2; background: #fff; -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+.single-post .title-group { font-size: 1rem; display: block; padding: 7px 20px; color: #444; /* border-top: 1px solid #ddd; */ border-bottom: 1px solid #ddd; background: #f0f0f0 url(../img/heading-bg.png) repeat-x; text-shadow: 1px 1px 1px #fff; }
+.single-post .breadcrunmbs { margin: 2px 0; }
+
+ul, li { margin: 0; padding: 0; }
+
+.single-post .breadcrunmbs li { font-size: .8rem; }
+
+.breadcrunmbs li { font-size: .7rem; display: inline; margin: 1px; }
+.breadcrunmbs li a { text-decoration: none; color: #1288ba !important; }
+.breadcrunmbs li a:hover { text-decoration: underline; background: none; }
+
+ul li { list-style: none; }
+
+.breadcrunmbs li:nth-child(1):before { content: ''; }
+.breadcrunmbs li:before { content: '>'; color: #13a8ee; }
+
+a { text-decoration: none; color: #1288ba; }
+
+.single-post h1 { font-size: 1.5rem; margin: 5px; }
+.single-post .post-meta { font-size: .8rem; overflow: hidden; margin: 5px 5px; }
+.single-post .post-meta div { float: left; }
+
+/*------------------------------------------------------------ 新ページナビ
+------------------------------------------------------------*/
+.more-post { overflow: hidden; margin: 10px 0 3px 0; -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+
+ul, li { margin: 0; padding: 0; }
+
+.more-post li { display: block; float: left; width: 33.3333%; text-align: center; }
+
+ul li { list-style: none; }
+
+ul, li { margin: 0; padding: 0; }
+
+.more-post li a { display: block; margin: 1px; padding: 8px 10px; color: #fff; border: 1px solid #45bbed; background-color: #5cc4ef; }
+.more-post li a:hover { color: #fff; background-color: #2eb3eb; }
+
+a { text-decoration: none; color: #1288ba; }
+
+/*------------------------------------------------------------ ブログTOPページボタン
+------------------------------------------------------------*/
+.single-widget { margin-top: 10px; border: 1px solid #e2e2e2; background: #fff; -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+
+.go2top a { color: #fff; }
+
+a { text-decoration: none; color: #1288ba; }
+
+.go2top .button { display: block; padding: 8px 10px; text-align: center; border: 0 auto; border: 1px solid #45bbed; background-color: #5cc4ef; }
+.go2top .button:hover { color: #fff; background-color: #2eb3eb; }
+
+/*------------------------------------------------------------ 新SNSボタン
+------------------------------------------------------------*/
+.subscribe { margin: 0px -10px; -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+
+.social-counters { display: block; overflow: hidden; }
+.social-counters #hatena { background-color: #568bca; }
+
+.social-counter-button { float: left; width: 25%; text-align: center; }
+.social-counter-button a { display: block; overflow: hidden; padding: 8px 40px !important; padding: 6px 0; text-decoration: none; color: white; }
+.social-counter-button a:hover, .social-counter-button a .social-counter-button a:active { text-decoration: none; opacity: .7; }
+
+a { text-decoration: none; color: #1288ba; }
+
+.social-counter-button .button-parts { display: table-cell; width: 1%; vertical-align: middle; }
+.social-counter-button .icon { font-size: 18px; }
+
+.social-counter-button .count { font-size: 14px; }
+
+.social-counters #facebook { background-color: #3b5998; }
+
+.social-counters #twitter { background-color: #00acee; }
+
+.social-counters #pocket { background-color: #ef3e56; }
+
+/*------------------------------------------------------------ クリアフィクス
+------------------------------------------------------------*/
+.fix { clear: both; margin: 0; padding: 0; }
+
+.cf { display: inline-block; overflow: hidden; }
+.cf:after { display: block; visibility: hidden; clear: both; height: 0; content: '.'; }
+
+* html .cf { height: 1%; }
+
+.cf { display: block; }
+
+br.fix {height: 0 !important;margin: 0 !important; padding: 0 !important;}
+
+/************************************
+** 自前のバルーンシェアボタン
+************************************/
+/*bottom*/
+#sns-btn-bottom{
+  margin:5px 15px;
+  padding: 10px 0px;
+  text-align: center;
+}
+.balloon-btn-set{
+  width:70px;
+  height:63px;
+}
+
+.balloon-btn-set a{
+  display:block;
+  color:#777;
+  font-size:15px;
+  text-decoration:none;
+}
+.balloon-btn-horizontal{
+  display: inline-block;
+  margin: 10px 2px;
+  text-align:center;
+}
+a.arrow-box-horizontal-link{
+  font-weight:bold;
+  text-align:center;
+}
+a.arrow-box-horizontal-link:hover{color:#777;}
+a.balloon-btn-horizontal-link{
+  border:1px solid #ddd;
+  width:68px;
+  height:25px;
+  line-height:25px !important;
+  position:relative;
+  top:7px;
+  color:white;
+  border-radius:3px;
+}
+a.balloon-btn-horizontal-link:hover{
+  color:white;
+  opacity:0.6;
+}
+
+a.twitter-balloon-btn-horizontal-link{background-color:#6bace2;}
+a.facebook-balloon-btn-horizontal-link{background-color:#445d93;}
+a.googleplus-balloon-btn-horizontal-link{background-color:#d36054;}
+a.hatena-balloon-btn-horizontal-link{background-color:#4c7ec6;}
+a.pocket-balloon-btn-horizontal-link{background-color:#e15c69;}
+a.line-balloon-btn-horizontal-link{background-color:#50c150;}
+a.feedly-balloon-btn-horizontal-link{background-color:#94be61;}
+
+.arrow-box-horizontal {
+  position: relative;
+  background: #fff;
+  border: 1px solid #bbb;
+  text-align:center;
+  width:68px;
+  height:33px;
+  border-radius:3px;
+  top:-7px;
+  line-height:33px;
+  display:inline-block;
+}
+
+.arrow-box-horizontal:after,
+.arrow-box-horizontal:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow-box-horizontal:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #fff;
+  border-width: 3px;
+  margin-left: -3px;
+}
+.arrow-box-horizontal:before {
+  border-color: rgba(187, 187, 187, 0);
+  border-top-color: #BBBBBB;
+  border-width: 5px;
+  margin-left: -5px;
+}
+/*  head  */
+.share-num{
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+.clearfloat {
+  clear:both;
+  height:0;
+  font-size: 1px;
+  line-height: 0px;
+}
